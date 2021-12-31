@@ -18,7 +18,7 @@ Click on the side arrows to scroll and on a poster to load the movie
 
 *NOTE: The videoplayer does have some code for custom player controls but i didnt manage to finish it in time and contemplated to delete it but decided to keep it if anyone wants to take a look...*
 
-``MovieSlider`` - Most complex component in the application. 
+``MovieSlider`` - Shows a panel of movies, if you click it, the videoplayer will update. 
 
 ``MovieSliderProps`` - Takes a callback function to change the movie. Used in index to relay it back to the VideoPlayer
 
