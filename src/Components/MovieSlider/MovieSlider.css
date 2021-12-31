@@ -1,0 +1,58 @@
+.movieSliderContainer {
+    color: white;
+    width: max-content;
+    max-width: 94vw;
+}
+
+.posterList{
+    display: flex;
+    overflow: hidden;
+    gap:15px;
+    
+}
+
+.poster {
+    width: 12vw;
+    height:auto;
+    min-width: 80px;
+    max-width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.posterText {
+    font-size: 0.5em;
+    text-align: center;
+}
+
+.description {
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    font-size: 0.6em;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.534);
+    padding: 5px
+}
+
+.posterRow {
+    position: relative;
+}
+
+.scrollArrow {
+    position: absolute;
+    right: 0px;
+    height: 92%;
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 5%;
+    font-size: 1em;
+}
+
+.left {
+    transform: scaleX(-1);
+    left: 0;
+}
+
+h6 {
+    margin:10px
+}

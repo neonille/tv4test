@@ -1,0 +1,41 @@
+.videoPlayer {
+    padding-top: 10px;
+    width: 80%;
+    height: 35vh;
+    max-width: 1000px;
+    margin:auto;
+}
+
+.videoContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.videoControls{
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.178);
+    width: 98%;
+    padding: 10px;
+    max-width: 50%;
+}
+
+.videoButton{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-size: 30px;
+    width: 25px;
+    color: white;
+    padding-right: 50px;
+}
+
+.hide {
+    display: none;
+}

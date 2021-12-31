@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+Thanks for letting me do this test! This was challangeing but very fun :) 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`npm i` to install all the packages
 
-## Available Scripts
+`npm start` and the app will run at localhost:3000
 
-In the project directory, you can run:
+Click on the side arrows to scroll and on a poster to load the movie
 
-### `npm start`
+# A little about the app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+*MoviesApp* - This is the main component that renders either a loadingspinner (thirdparty) or the main parts of the app (VideoPlayer and the MovieSlides)
 
-### `npm test`
+*LoadingSpinner* - Loading spinner is a functional component that returns a spinner and a "loading" text. It only has one property for the text to be rendered. The component covers the entire container and is centered.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*VideoPlayer* - Only has one property, the source of the movie to be played. This property is checked in the componentDidUpdate-function to see if the source has changed, if it has, update the videoplayers source to play the new movie
 
-### `npm run build`
+NOTE: The videoplayer does have some code for custom player controls but i didnt manage to finish it in time and contemplated to delete it but decided to keep it if anyone wants to take a look...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*MovieSlider* - Most complex component in the application. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    MovieSliderProps - Takes a callback function to change the movie. Used in index to relay it back to the VideoPlayer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Panel - The panel to display, each panel contains all the items and title
 
-### `npm run eject`
+    MovieSliderStates - Mainly used for the description box, where it should be rendered, and IF it should be rendered.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*Child components* - The MovieSlider has some functional child components. They are apart of the movieslider class to keep the references intact.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Description - The descriptionbox, takes in the where, what and if it should be rendered. All of this is taken in the states of the MovieSlider comp.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    Arrow - The arrows at the edges of the MovieSlider. Has one prop, direction.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    PosterList - Shows the list of posters
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Improvements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The scrollarrows arent 100% according to design and i would like to improve them. There are some questions if for instance the list should autoscroll if the mouse is at the edges or not (irl i would have asked the stakeholders about this)
+
+Support for different env
+
+Finish the custom controls
+
+The MoviesApp is a functinal component but could also have been a class component instead because of it size.
+
+Implement some JEST tests
+
+Improve the responsivenes
+
+I discovered that Firefox seem to take issue with changing the video src directly. A rough solution could be to completely reload the entire videoplayer instead
+(Chrome,Opera and edge works fine)
