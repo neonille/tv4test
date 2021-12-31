@@ -10,29 +10,31 @@ Click on the side arrows to scroll and on a poster to load the movie
 
 ## Components
 
-*MoviesApp* - This is the main component that renders either a loadingspinner (thirdparty) or the main parts of the app (VideoPlayer and the MovieSlides)
+`MoviesApp` - This is the main component that renders either a loadingspinner (thirdparty) or the main parts of the app (VideoPlayer and the MovieSlides)
 
-*LoadingSpinner* - Loading spinner is a functional component that returns a spinner and a "loading" text. It only has one property for the text to be rendered. The component covers the entire container and is centered.
+``LoadingSpinner`` - Loading spinner is a functional component that returns a spinner and a "loading" text. It only has one property for the text to be rendered. The component covers the entire container and is centered.
 
-*VideoPlayer* - Only has one property, the source of the movie to be played. This property is checked in the componentDidUpdate-function to see if the source has changed, if it has, update the videoplayers source to play the new movie
+``VideoPlayer`` - Only has one property, the source of the movie to be played. This property is checked in the componentDidUpdate-function to see if the source has changed, if it has, update the videoplayers source to play the new movie
 
-NOTE: The videoplayer does have some code for custom player controls but i didnt manage to finish it in time and contemplated to delete it but decided to keep it if anyone wants to take a look...
+*NOTE: The videoplayer does have some code for custom player controls but i didnt manage to finish it in time and contemplated to delete it but decided to keep it if anyone wants to take a look...*
 
-*MovieSlider* - Most complex component in the application. 
+``MovieSlider`` - Most complex component in the application. 
 
-    MovieSliderProps - Takes a callback function to change the movie. Used in index to relay it back to the VideoPlayer
+``MovieSliderProps`` - Takes a callback function to change the movie. Used in index to relay it back to the VideoPlayer
 
-    Panel - The panel to display, each panel contains all the items and title
+``Panel`` - The panel to display, each panel contains all the items and title
 
-    MovieSliderStates - Mainly used for the description box, where it should be rendered, and IF it should be rendered.
+``MovieSliderStates`` - Mainly used for the description box, where it should be rendered, and IF it should be rendered.
 
-*Child components* - The MovieSlider has some functional child components. They are apart of the movieslider class to keep the references intact.
 
-    Description - The descriptionbox, takes in the where, what and if it should be rendered. All of this is taken in the states of the MovieSlider comp.
 
-    Arrow - The arrows at the edges of the MovieSlider. Has one prop, direction.
+Child components - The MovieSlider has some functional child components. They are apart of the movieslider class to keep the references intact.
 
-    PosterList - Shows the list of posters
+``Description`` - The descriptionbox, takes in the where, what and if it should be rendered. All of this is taken in the states of the MovieSlider comp.
+
+``Arrow`` - The arrows at the edges of the MovieSlider. Has one prop, direction.
+
+``PosterList`` - Shows the list of posters
 
 
 # Improvements
